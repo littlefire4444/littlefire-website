@@ -13,9 +13,9 @@ body {
 }
 
 .logo {
-    width: 220px;
+    width: 220px; /* increased size */
     height: auto;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .subtitle {
@@ -77,4 +77,29 @@ footer {
     font-size: 0.9em;
     color: #aaa;
     background-color: #1a1a1a;
+}
+
+/* New screenshots section with faded background */
+
+.screenshots {
+    position: relative;
+    color: #f1f1f1;
+    background: url('images/trading-graph-fade.jpg') no-repeat center center/cover;
+    padding: 60px 20px;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.screenshots::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(18, 18, 18, 0.75);
+    z-index: 0;
+    border-radius: 8px;
+}
+
+.screenshots > * {
+    position: relative;
+    z-index: 1;
 }
